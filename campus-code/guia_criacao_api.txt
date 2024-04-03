@@ -1,0 +1,53 @@
+
+
+COMANDOS
+rails --help
+rails server
+rails db:migrate
+rails db:migrate:status
+rails g migration remove_nome_from_category nome
+rails console
+modelname.create()
+quit
+rails db:seed
+rails routes -g category
+
+===================
+
+rails new catalogo_de_filmes
+
+rails g model category
+
+rails g migration add_nome_to_category nome
+
+migrate add_nome.rb:
+default: 0
+
+rails g model filmmaker nome data_nascimento
+
+rails db:migrate
+
+rails g model film nome ano:integer poster category:references filmmaker:references
+
+film.rb:
+enum status: { não_lançado:0, lançado:2  }
+enum post: { rascunho:0, publicado:2 }
+
+rails g migration add_status_to_film status:integer
+rails g migration add_post_to_film post:integer
+
+migrate add_.rb:
+default: 0
+default: 0
+
+rails db:migrate
+
+rails g migration remove_nome_from_category nome
+
+
+
+
+
+
+
+
